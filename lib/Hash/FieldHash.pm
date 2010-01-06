@@ -5,7 +5,7 @@ use strict;
 
 our $VERSION = '0.08';
 
-use Exporter qw(import);
+use parent qw(Exporter);
 our @EXPORT_OK   = qw(fieldhash fieldhashes from_hash to_hash);
 our %EXPORT_TAGS = (all => \@EXPORT_OK);
 
