@@ -1,6 +1,6 @@
 package Hash::FieldHash;
 
-use 5.008_001;
+use 5.008_005;
 use strict;
 
 our $VERSION = '0.08';
