@@ -365,6 +365,11 @@ hf_add_field(pTHX_ HV* const fieldhash, SV* const name, SV* const package){
 		namelen += sizeof("::")-1 + pkglen;
 		(void)hv_store(fields, namepv, namelen, newRV_inc((SV*)fieldhash), 0U);
 
+		if(ckWARN(WARN_REDEFINE) && get_cv(namepv, 0x00)){
+			Perl_warner(aTHX_ packWARN(WARN_REDEFINE),
+				"Subroutine %s redefined", namepv);
+		}
+
 		xsub = newXS( (char*)namepv, XS_Hash__FieldHash_accessor, __FILE__);
 		sv_magicext(
 			(SV*)xsub,
