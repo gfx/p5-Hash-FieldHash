@@ -22,6 +22,8 @@ if(author_context){
 
 makemaker_args depend => { '$(C_FILES)' => 'compat58.xsi' },
 
+auto_set_repository() if -d '.git';
+
 clean_files q(
 	Hash-FieldHash-* *.stackdump
 	*.gcda *.gcno *.gcov
