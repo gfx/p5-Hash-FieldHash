@@ -1,5 +1,10 @@
 Revision history for Perl extension Hash::FieldHash
 
+0.09 Wed Jan  6 15:06:58 2010
+	- Make warnings on subroutine redefinition (RT #52073)
+	- Minimum perl version is now 5.8.5
+	- Modernize Makefile.PL
+
 0.08 Mon Jun 15 22:45:02 2009
 	- update ppport.h to 3.19
 
