@@ -1,5 +1,8 @@
 Revision history for Perl extension Hash::FieldHash
 
+0.10 Sun Jan 10 15:27:10 2010
+    - Add parent.pm to dependencies
+
 0.09 Wed Jan  6 15:06:58 2010
 	- Make warnings on subroutine redefinition (RT #52073)
 	- Minimum perl version is now 5.8.5
