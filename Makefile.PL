@@ -8,6 +8,7 @@ all_from 'lib/Hash/FieldHash.pm';
 use_ppport 3.19;
 cc_warnings;
 
+requires 'parent' => 0.221;
 requires 'MRO::Compat' => 0.10 if $] < 5.010;
 
 test_requires 'Test::More'      => 0.62;
