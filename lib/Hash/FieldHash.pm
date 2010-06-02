@@ -194,7 +194,7 @@ IDs.
 
 =head1 DEPENDENCIES
 
-Perl 5.8.1 or later, and a C compiler.
+Perl 5.8.5 or later, and a C compiler.
 
 =head1 BUGS
 
@@ -214,11 +214,11 @@ L<Class::Std> describes the inside-out technique.
 
 =head1 AUTHOR
 
-Goro Fuji E<lt>gfuji(at)cpan.orgE<gt>.
+Fuji, Goro (gfx) E<lt>gfuji(at)cpan.orgE<gt>.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2009-2010, Goro Fuji. Some rights reserved.
+Copyright (c) 2009-2010, Fuji, Goro. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
