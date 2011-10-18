@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-Hash::FieldHash - A lightweight field hash implementation
+Hash::FieldHash - Lightweight field hash for inside-out objects
 
 =head1 VERSION
 
@@ -66,10 +66,10 @@ C<Hash::FieldHash> provides the field hash mechanism which supports
 the inside-out technique.
 
 You may know C<Hash::Util::FieldHash>. It's a very useful module,
-but too complex to understand all the functions and only available in 5.10.
-C<H::U::F::Compat> is available for pre-5.10, but it seems too slow to use.
+but too complex to understand the functionality and only available in 5.10.
+C<H::U::F::Compat> is available for pre-5.10, but it is too slow to use.
 
-This is an alternative to C<H::U::F> with following features:
+This is a better alternative to C<H::U::F> with following features:
 
 =over 4
 
@@ -150,7 +150,7 @@ For example:
 	my $p = MyDerivedClass->new('MyClass::foo' => 10, 'MyDerivedClass::bar' => 20);
 
 	use Data::Dumper;
-	print Dumper($o->to_hash()); 
+	print Dumper($o->to_hash());
 	# $VAR1 = { foo => 10, bar => 20 }
 
 	print Dumper($o->to_hash(-fully_qualify));
