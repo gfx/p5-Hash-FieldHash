@@ -5,13 +5,14 @@ use Benchmark qw(:all);
 use Hash::FieldHash;
 {
     package ByHand;
+    use Scalar::Util qw(refaddr);
     my %foo_of;
     my %bar_of;
     sub new {
         my($class, $a, $b) = @_;
         my $self = bless {}, $class;
-        $foo_of{$self} = $a;
-        $bar_of{$self} = $b;
+        $foo_of{refaddr $self} = $a;
+        $bar_of{refaddr $self} = $b;
         return $self;
     }
     sub DESTROY {
