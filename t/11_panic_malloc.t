@@ -1,11 +1,13 @@
 #!perl -w
-
 # fix "panic: malloc" error in fieldhash_key_free()
-
-
 use strict;
+use constant HAS_WEAKEN => eval {
+    require Scalar::Util;
+    Scalar::Util->import('weaken');
+    return 1;
+};
+use if !HAS_WEAKEN, 'Test::More' => 'skip_all', 'missing weaken()';
 use Test::More tests => 2;
-
 
 BEGIN{
 	package Hook::Finalizer;
