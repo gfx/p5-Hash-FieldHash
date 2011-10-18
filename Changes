@@ -1,5 +1,8 @@
 Revision history for Perl extension Hash::FieldHash
 
+0.12 2011-10-18 13:37:07
+    - Mention to what accessors return (RT #68408 by Ron Savage)
+
 0.11 2011-10-18 13:28:07
     - Update M::I::XSUtil to 0.41
     - Skip system depended tests
