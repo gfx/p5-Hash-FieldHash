@@ -1,3 +1,5 @@
+/* vim: set filetype=XS: */
+
 
 void
 fieldhash(HV* hash, SV* name = NULL, SV* package = NULL)
