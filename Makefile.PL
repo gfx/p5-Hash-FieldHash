@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use inc::Module::Install;
-use Module::Install::XSUtil 0.19;
+use Module::Install::XSUtil 0.41;
 use Module::Install::AuthorTests;
 use Module::Install::Repository;
 
