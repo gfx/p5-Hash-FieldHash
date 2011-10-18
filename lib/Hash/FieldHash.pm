@@ -192,6 +192,18 @@ While C<Hash::Util::FieldHash> uses C<refaddr> as the IDs of field
 hash keys, C<Hash::FieldHash> allocates arbitrary integers as the
 IDs.
 
+=head2 What accessors return
+
+The accessors C<fieldhash()> creates are B<chainable> accessors.
+That is, it returns the I<$object> (i.e. C<$self>) with a parameter,
+where as it returns the I<$value> without it.
+
+For example:
+
+    my $o = YourClass->new();
+    $o->foo(42);           # returns $o itself
+    my $value = $o->foo(); # retuns 42
+
 =head1 DEPENDENCIES
 
 Perl 5.8.5 or later, and a C compiler.
