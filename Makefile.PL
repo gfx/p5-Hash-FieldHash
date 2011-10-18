@@ -7,7 +7,7 @@ use Module::Install::Repository;
 
 all_from 'lib/Hash/FieldHash.pm';
 
-use_ppport 3.19;
+use_xshelper;
 cc_warnings;
 
 requires 'parent' => 0.221;

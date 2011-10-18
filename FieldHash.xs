@@ -1,10 +1,5 @@
-#define PERL_NO_GET_CONTEXT
-#include <EXTERN.h>
-#include <perl.h>
-#include <XSUB.h>
-
 #define NEED_newSV_type
-#include "ppport.h"
+#include "xshelper.h"
 #include "mgx.h"
 #define NEED_mro_get_linear_isa
 #include "mro_compat.h"
