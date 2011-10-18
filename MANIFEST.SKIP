@@ -45,3 +45,5 @@ FieldHash\.c$
 \.bs$
 
 ^ppport\.h$
+
+MYMETA\.(?:json|yml)$

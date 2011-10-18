@@ -15,8 +15,10 @@ cover_db/*
 nytprof*
 *.out
 ppport.h
+xshelper.h
 *.bs
 *.o
 *.obj
 *.c
+MYMETA.*
 
