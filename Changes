@@ -1,5 +1,7 @@
 Revision history for Perl extension Hash::FieldHash
 
+{{$NEXT}}
+
 0.12 2011-10-18 13:37:07
     - Mention to what accessors return (RT #68408 by Ron Savage)
 

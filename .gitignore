@@ -22,3 +22,9 @@ xshelper.h
 *.c
 MYMETA.*
 
+/Hash-FieldHash-*
+/.build
+/_build_params
+/Build
+!Build/
+!META.json
