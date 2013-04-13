@@ -57,9 +57,9 @@ sub _infer_xs_spec {
     my $basename = pop @d;
 
     # NOTE:
-    # They've been infered from the XS source file, but it's a bad idea!
-    # That's because these names are used XSLoader, which
-    # deduces filenames from the module name, not a XS file name.
+    # They've been infered from the XS filename, but it's a bad idea!
+    # That's because these names are used by XSLoader, which
+    # deduces filenames from the module name, not an XS filename.
 
     $spec->{archdir} = File::Spec->catfile(
         $self->blib, 'arch', 'auto',
