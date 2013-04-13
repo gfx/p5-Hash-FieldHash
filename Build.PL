@@ -9,13 +9,13 @@ use strict;
 use warnings;
 use utf8;
 
-use Module::Build;
+use builder::MyBuilder;
 use File::Basename;
 use File::Spec;
 use CPAN::Meta;
 use CPAN::Meta::Prereqs;
 
-my $builder = Module::Build->new(
+my $builder = builder::MyBuilder->new(
     license              => 'perl',
     dynamic_config       => 0,
 

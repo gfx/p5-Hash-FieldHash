@@ -70,9 +70,10 @@
          "web" : "https://github.com/gfx/p5-Hash-FieldHash"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_contributors" : [
       "gfx <gfuji@cpan.org>",
-      "Fuji Goro <fuji.goro@dena.jp>"
+      "Fuji Goro <fuji.goro@dena.jp>",
+      "Fuji, Goro <g.psy.va@gmail.com>"
    ]
 }

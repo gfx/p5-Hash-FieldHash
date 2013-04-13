@@ -15,13 +15,13 @@ cover_db/*
 nytprof*
 *.out
 ppport.h
-xshelper.h
+#xshelper.h
 *.bs
 *.o
 *.obj
 *.c
 MYMETA.*
-
+/_build
 /Hash-FieldHash-*
 /.build
 /_build_params

@@ -7,7 +7,8 @@ use parent qw(Module::Build);
 use File::Basename;
 use Devel::PPPort;
 
-my $xs_src = 'src';
+my $xs_src   = 'src';
+my $xs_build = '_xs_build';
 
 sub new {
     my($class, %args) = @_;
@@ -21,12 +22,27 @@ sub new {
     #$args{c_source} = $xs_src;
     $args{needs_compiler} = 1;
     $args{xs_files} = {
-        map { $_ => './_xs_build/' . $_ } glob("$xs_src/*.xs")
+        map { $_ => "./$xs_build/" . $_ }
+        glob("$xs_src/*.xs"),
     };
 
     $args{extra_compiler_flags} = ["-I$xs_src"];
 
     return $class->SUPER::new(%args);
+}
+
+sub process_xs_files {
+    my($self) = @_;
+
+    # NOTE:
+    # XS modules are consist of not only *.xs, but also *.c, *.xsi, and etc.
+    foreach my $from(glob "$xs_src/*.{c,cpp,cxx,xsi,xsh}") {
+        my $to = "$xs_build/$from";
+        $self->add_to_cleanup($to);
+        $self->copy_if_modified(from => $from, to => $to);
+    }
+
+    $self->SUPER::process_xs_files();
 }
 
 sub _infer_xs_spec {
@@ -44,6 +60,7 @@ sub _infer_xs_spec {
     # They've been infered from the XS source file, but it's a bad idea!
     # That's because these names are used XSLoader, which
     # deduces filenames from the module name, not a XS file name.
+
     $spec->{archdir} = File::Spec->catfile(
         $self->blib, 'arch', 'auto',
         @d, $basename);
@@ -56,7 +73,7 @@ sub _infer_xs_spec {
         $spec->{archdir},
         $basename . '.' . $self->{config}->get('dlext'));
 
-    use Data::Dumper; print Dumper $spec;
+    #use Data::Dumper; print Dumper $spec;
 
     return $spec;
 }

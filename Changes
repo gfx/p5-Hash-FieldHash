@@ -1,6 +1,8 @@
 Revision history for Perl extension Hash::FieldHash
 
 {{$NEXT}}
+    - Use Module::Build instead of Module::Install with minil(1)
+    - No code changes
 
 0.12 2011-10-18 13:37:07
     - Mention to what accessors return (RT #68408 by Ron Savage)
