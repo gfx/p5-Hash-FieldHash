@@ -15,7 +15,7 @@ use File::Spec;
 use CPAN::Meta;
 use CPAN::Meta::Prereqs;
 
-my $builder = builder::MyBuilder->new(
+my %args = (
     license              => 'perl',
     dynamic_config       => 0,
 
@@ -23,15 +23,30 @@ my $builder = builder::MyBuilder->new(
         'Module::Build' => 0.38,
     },
 
-    no_index    => { 'directory' => [ 'inc' ] },
-    name        => 'Hash-FieldHash',
-    module_name => 'Hash::FieldHash',
+    name            => 'Hash-FieldHash',
+    module_name     => 'Hash::FieldHash',
+    allow_pure_perl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],
 
     test_files           => ((-d '.git' || $ENV{RELEASE_TESTING}) && -d 'xt') ? 't/ xt/' : 't/',
     recursive_test_files => 1,
 );
+if (-d 'share') {
+    $args{share_dir} = 'share';
+}
+
+my $builder = builder::MyBuilder->subclass(
+    class => 'MyBuilder',
+    code => q{
+        sub ACTION_distmeta {
+            die "Do not run distmeta. Install Minilla and `minil install` instead.\n";
+        }
+        sub ACTION_installdeps {
+            die "Do not run installdeps. Run `cpanm --installdeps .` instead.\n";
+        }
+    }
+)->new(%args);
 $builder->create_build_script();
 
 my $mbmeta = CPAN::Meta->load_file('MYMETA.json');

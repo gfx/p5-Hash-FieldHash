@@ -4,7 +4,7 @@ Hash::FieldHash - Lightweight field hash for inside-out objects
 
 # VERSION
 
-This document describes Hash::FieldHash version 0.13.
+This document describes Hash::FieldHash version 0.14.
 
 # SYNOPSIS
 

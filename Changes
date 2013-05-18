@@ -2,6 +2,9 @@ Revision history for Perl extension Hash::FieldHash
 
 {{$NEXT}}
 
+0.14 2013-05-18T23:54:21Z
+    - Fix a build issue on 5.8.x
+
 0.13 2013-04-13T11:09:06Z
     - Use Module::Build instead of Module::Install with minil(1)
     - No code changes
