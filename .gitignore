@@ -28,3 +28,4 @@ MYMETA.*
 /Build
 !Build/
 !META.json
+_xs_build/

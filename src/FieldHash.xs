@@ -4,6 +4,10 @@
 #define NEED_mro_get_linear_isa
 #include "mro_compat.h"
 
+#ifndef HvNAMELEN_get
+#define HvNAMELEN_get(stash) strlen(HvNAME_get(stash))
+#endif
+
 #if PERL_BCDVERSION < 0x5010000
 #define HF_USE_TIE TRUE
 #endif
