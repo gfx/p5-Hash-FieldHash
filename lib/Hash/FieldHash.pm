@@ -21,7 +21,7 @@ sub fieldhashes{
 1;
 __END__
 
-=for stopwords uvar CPAN
+=for stopwords uvar CPAN rw-accessors chainable
 
 =head1 NAME
 
