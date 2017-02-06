@@ -91,7 +91,7 @@ BEGIN {
     }
 
     package Impostor;
-    use base 'Person';
+    use parent -norequire, 'Person';
 
     {
         CFF::fieldhash my %assumed_title;
@@ -105,7 +105,7 @@ BEGIN {
         }
 
         sub title { $assumed_title{ shift()} }
-        
+
         sub assume_title {
             my $p = shift;
             $assumed_title{ $p} = shift || '';
