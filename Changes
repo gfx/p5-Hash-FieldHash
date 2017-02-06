@@ -2,6 +2,9 @@ Revision history for Perl extension Hash::FieldHash
 
 {{$NEXT}}
 
+0.15 2017-02-06T01:10:09Z
+    - Fix #1: t/orig/03_class.t fails if FamilyTreeInfo-2.3.24 is installed
+
 0.14 2013-05-18T23:54:21Z
     - Fix a build issue on 5.8.x
 
