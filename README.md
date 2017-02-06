@@ -1,5 +1,4 @@
-\[!\[Build Status\](https://travis-ci.org/gfx/p5-Hash-FieldHash.svg?branch=master)\](https://travis-ci.org/gfx/p5-Hash-FieldHash)
-
+[![Build Status](https://travis-ci.org/gfx/p5-Hash-FieldHash.svg?branch=master)](https://travis-ci.org/gfx/p5-Hash-FieldHash) [![MetaCPAN Release](https://badge.fury.io/pl/Hash-FieldHash.svg)](https://metacpan.org/release/Hash-FieldHash)
 # NAME
 
 Hash::FieldHash - Lightweight field hash for inside-out objects

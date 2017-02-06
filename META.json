@@ -70,6 +70,7 @@
       }
    },
    "version" : "0.15",
+   "x_authority" : "cpan:GFUJI",
    "x_contributors" : [
       "Fuji Goro <fuji.goro@dena.jp>",
       "Fuji, Goro <g.psy.va@gmail.com>",

@@ -1,4 +1,7 @@
+name="Hash-FieldHash"
+authority = "cpan:GFUJI"
 module_maker = "ModuleBuild"
+badges = ["travis", "metacpan"]
 
 [build]
 build_class = "builder::MyBuilder"

@@ -23,8 +23,6 @@ __END__
 
 =for stopwords uvar CPAN rw-accessors chainable
 
-[![Build Status](https://travis-ci.org/gfx/p5-Hash-FieldHash.svg?branch=master)](https://travis-ci.org/gfx/p5-Hash-FieldHash)
-
 =head1 NAME
 
 Hash::FieldHash - Lightweight field hash for inside-out objects
